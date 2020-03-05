@@ -1,0 +1,105 @@
+:root {
+  /* --delayed: #f0a411; */
+  --delayed: #ffed6b;
+
+  --yellow: #e6e126;
+  --red: #e63f26;
+  --orange: #e66102;
+  --purple: #c802e6;
+}
+
+* {
+  margin: 0;
+  /* cursor: none; */
+}
+
+body {
+  background: black;
+  color: white;
+  font-family: 'Segoe UI', 'Roboto', arial, sans-serif;
+  font-size: 25px;
+
+  user-select: none;
+  overflow: hidden;
+}
+
+
+/* sections */
+.program {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.clock {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* program */
+.program .section {
+  display: flex;
+  padding: 5px 0;
+  padding: 16px 20px;
+}
+.program .section.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+}
+/* .program .section div:not(.color) {
+  padding: 0 10px;
+} */
+.flexColumn {
+  flex-direction: column;
+  padding: 0 10px;
+}
+
+.name {
+  font-size: 30px;
+}
+.description {
+  color: #cdcdcd;
+}
+
+.color {
+  width: 6px;
+  height: 40px;
+  border-radius: 10px;
+}
+.color, .time {
+  align-self: center;
+}
+.time {
+  padding: 0 16px;
+}
+
+
+/* clock */
+#digital {
+  text-align: center;
+}
+#clock {
+  border-radius: 50%;
+  border: 1px solid white; /* TODO: remove this */
+  width: 500px;
+  height: 500px;
+}
+#clock .ticker {
+  background: white;
+  border-radius: 10px;
+  width: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+#tickerH {
+  height: 100px;
+}
+#tickerM {
+  height: 200px;
+}
