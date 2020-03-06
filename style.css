@@ -5,7 +5,11 @@
   --yellow: #e6e126;
   --red: #e63f26;
   --orange: #e66102;
-  --purple: #c802e6;
+  --blue: #02c1e6;
+  --green: #00dd67;
+  /* --purple: #e226ff; */
+  --purple: #9800b0;
+  /* --purple: #aa4767; */
 }
 
 * {
@@ -28,7 +32,7 @@ body {
 .program {
   position: absolute;
   top: 50%;
-  left: 25%;
+  left: 28%;
   transform: translate(-50%, -50%);
 }
 
@@ -39,15 +43,25 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.info {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  min-width: 600px;
+  text-align: center;
+}
+
 
 /* program */
 .program .section {
   display: flex;
   padding: 5px 0;
   padding: 16px 20px;
+  transition: background .5s;
 }
 .program .section.active {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.18);
   border-radius: 6px;
 }
 /* .program .section div:not(.color) {
@@ -55,7 +69,7 @@ body {
 } */
 .flexColumn {
   flex-direction: column;
-  padding: 0 10px;
+  /* padding: 0 10px; */
 }
 
 .name {
@@ -63,18 +77,20 @@ body {
 }
 .description {
   color: #cdcdcd;
+  max-width: 400px;
 }
 
 .color {
   width: 6px;
-  height: 40px;
+  height: 60px;
   border-radius: 10px;
+  margin: 0 30px;
 }
 .color, .time {
   align-self: center;
 }
 .time {
-  padding: 0 16px;
+  /* padding: 0 16px; */
 }
 
 
@@ -103,3 +119,18 @@ body {
 #tickerM {
   height: 200px;
 }
+
+
+
+/* info */
+.info div {
+  background: var(--orange);
+  color: black;
+  /* padding: 8px 20px 0 20px; */
+  padding: 9px 16px 12px 16px;
+  border-radius: 2px;
+  /* transition: all .2s; */
+}
+/* .info div:last-child {
+  padding-bottom: 8px;
+} */
