@@ -106,16 +106,18 @@ function updateProgram() {
   var count = 0;
   for (var i = 0; i < program.length; i++) {
 
+    // new Date().toLocaleString("no-NO", {timeZone: 'Europe/Oslo'});
+
     var time = 'time';
     if (exists(program[i].delayed.from)) time = 'delayed';
 
-    var dateTime = new Date(year + '-' + program[i].date + 'T' + program[i][time].to + ':00');
+    var dateTime = new Date(year + '-' + program[i].date + 'T' + program[i][time].to + ':00+01:00');
     // var dateTime = Date.parse(year + '-' + program[i].date + 'T' + program[i].time.to + ':00');
 
     if (dateTime > now && count < 5) {
       count++;
       var active = '';
-      if (new Date(year + '-' + program[i].date + 'T' + program[i][time].from + ':00') < now) active = 'active';
+      if (new Date(year + '-' + program[i].date + 'T' + program[i][time].from + ':00+01:00') < now) active = 'active';
 
       var showTime = '>' + program[i][time].from;
       if (time == 'delayed') showTime = ' style="color:var(--delayed)"' + showTime;
