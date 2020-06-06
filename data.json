@@ -1,0 +1,82 @@
+{
+    "---comment": "Format: '2020-03-08' = 8. mars 2020",
+    "dato": "2020-06-06",
+    "---timezone": "+01:00",
+    "tidssone": "+02:00",
+    "info": [
+        "<b>Minecraft Server:</b> <i>Kommer snart</i>",
+        "---<b>Minecraft Server:</b> 192.168.19.178",
+        "---<b>Film oppe:</b> Inside Out",
+        "Oppe er det film og avslapping",
+        "---Mistet ting er funnet! Snakk med Martin Berge",
+        "---Om noen har mistet en mobil snakk med Martin Berge",
+        "<b>Toaletter</b> i gangen og nede",
+        "Mulighet for <b>soving</b> nede i sjokoladefabrikken",
+        "<b>Infoskjerm</b>: laninfo.netlify.com"
+    ],
+    "program":[
+        {
+            "time": {"from": "16:12", "to": "16:28"},
+            "---comment": "utsatt til / nytt klokkeslett",
+            "delayed": {"from": "", "to": "16:14"},
+            "date": "dato",
+            "name": "Test",
+            "icon": "",
+            "description": "Vi skal spille super smash bros, til høyre i lillesalen",
+            "position": "",
+            "color": "purple"
+        },
+        {
+            "---comment": "time: { \"from\": \"21:00\", \"to\": \"21:20\" },",
+            "time": {"from": "20:00", "to": "21:00"},
+            "delayed": {"from": "16:39", "to": "16:40"},
+            "date": "dato",
+            "name": "Kveldsmøte",
+            "----comment": "menu_book",
+            "description": "Andakt og lovsang",
+            "position": "Her",
+            "color": "purple"
+        },
+        {
+            "time": {"from": "21:00", "to": "21:20"},
+            "---comment": "delayed: { \"from\": \"21:10\", \"to\": \"21:30\" },",
+            "delayed": {"from": "", "to": ""},
+            "date": "dato",
+            "name": "Mat",
+            "icon": "fastfood",
+            "description": "Taco",
+            "position": "Nede i kjeller",
+            "color": "cyan"
+        },
+        {
+            "time": {"from": "23:30", "to": "23:59"},
+            "delayed": {"from": "", "to": ""},
+            "date": "dato",
+            "name": "Super Smash Bros Turnering",
+            "icon": "emoji_events",
+            "description": "Påmelding til Sondre Harestad",
+            "position": "Liten sal",
+            "color": "red"
+        },
+        {
+            "time": {"from": "00:00", "to": "00:20"},
+            "delayed": {"from": "", "to": ""},
+            "date": "2020-06-07",
+            "name": "Nattmat",
+            "icon": "fastfood",
+            "description": "Boller og saft",
+            "position": "Nede i kjeller",
+            "color": "cyan"
+        },
+        {
+            "time": { "from": "00:30", "to": "00:40" },
+            "delayed": { "from": "", "to": "" },
+            "date": "2020-06-07",
+            "name": "MC Turnering",
+            "icon": "emoji_events",
+            "description": "Bedwars og PvP",
+            "position": "varden.mc.gg",
+            "color": "green"
+        }
+    ]
+}

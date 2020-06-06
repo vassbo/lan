@@ -1,119 +1,95 @@
-// Mat = yellow ???
-// Turnering = ...
+var initialWait = 3;
+var infoUpdateRate = 4;
+var dataUpdateRate = 5;
+var updateRate = 0.5; // analog clock, digital clock, program // debug: 0.05 // 0.5
+var programCount = 4;
 
+var debug = false;
 
+var dato, program, info, tidssone;
 
+getData("data.json");
+function getData(request) {
+  var oXHR = new XMLHttpRequest();
 
-var dato = '03-08'; // 05.03
-var year = '2020';
+  // initiate request
+  oXHR.onreadystatechange = reportStatus;
+  oXHR.open("GET", request, true);  // get json file.
+  oXHR.send();
 
-var program = [
-  {
-    time: { from: '15:34', to: '15:45' },
-    delayed: { from: '15:41', to: '15:48' }, // utsatt til / nytt klokkeslett
-    date: dato,
-    name: 'Test',
-    icon: '',
-    description: 'Vi skal spille super smash bros, til høyre i lillesalen',
-    position: '',
-    color: 'purple'
-  },
-  {
-    // time: { from: '21:00', to: '21:20' },
-    time: { from: '20:00', to: '21:00' },
-    delayed: { from: '', to: '' },
-    date: dato,
-    name: 'Kveldsmøte',
-    icon: '', // menu_book
-    description: 'Andakt og lovsang',
-    position: 'Her',
-    color: 'purple'
-  },
-  {
-    time: { from: '21:00', to: '21:20' },
-    // delayed: { from: '21:10', to: '21:30' },
-    delayed: { from: '', to: '' },
-    date: dato,
-    name: 'Mat',
-    icon: 'fastfood',
-    description: 'Taco',
-    position: 'Nede i kjeller',
-    color: 'blue'
-  },
-  {
-    time: { from: '23:30', to: '23:59' },
-    delayed: { from: '', to: '' },
-    date: dato,
-    name: 'Super Smash Bros Turnering',
-    icon: 'emoji_events',
-    description: 'Påmelding til Sondre Harestad',
-    position: 'Liten sal',
-    color: 'red'
-  },
-  {
-    time: { from: '00:00', to: '00:20' },
-    delayed: { from: '', to: '' },
-    date: '03-09',
-    name: 'Nattmat',
-    icon: 'fastfood',
-    description: 'Boller og saft',
-    position: 'Nede i kjeller',
-    color: 'blue'
-  },
-];
-
-
-
-
-var info = [
-  '<b>Minecraft Server:</b> <i>Kommer snart</i>',
-  // '<b>Film oppe:</b> Inside Out',
-  'Oppe er det film og avslapping',
-  // 'Mistet ting er funnet! Snakk med Martin Berge',
-  '<b>Toaletter</b> i gangen og nede',
-  'Mulighet for <b>soving</b> nede i sjokoladefabrikken'
-];
-
+  function reportStatus() {
+    if (oXHR.readyState == 4) { // check if request is complete.
+      if (this.responseText !== '404: Not Found') {
+        let data = JSON.parse(this.responseText);
+        // console.log(this.responseText);
+        // console.log(data);
+        
+        dato = data.dato;
+        tidssone = data.tidssone;
+        program = data.program;
+        info = data.info;
+      }
+    }
+  }
+}
 
 
 /////////////////////////////////////////
 /////////////////////////////////////////
 
+setTimeout(() => {
 
 
-var html = '', infoPos = 0;
-setInterval(infoUpdate, 4000);
+
+// update data
+setInterval(() => {
+  // getData("data.json");
+  getData("https://raw.githubusercontent.com/vassbo/lan/master/data.json");
+}, dataUpdateRate * 1000);
+
+
+// info
+var infoPos = 0;
+setInterval(infoUpdate, infoUpdateRate * 1000);
 infoUpdate();
 function infoUpdate() {
-  // for (var i = 0; i < info.length; i++) {
-  //   html += '<div>' + info[i] + '</div>';
-  // }
-  document.querySelector('.info').innerHTML = '<div>' + info[infoPos] + '</div>';
+  while (info[infoPos].slice(0, 3) == '---') infoPos++;
+  document.querySelector('.info').innerHTML = '<div>' + info[infoPos] + '</div>'; // <span class="material-icons-outlined">info</span>
   infoPos++;
   if (infoPos >= info.length) infoPos = 0;
 }
 
 
+// debug
+var debugDate = new Date() / 1;
+if (debug) {
+  setInterval(() => {
+    debugDate += 60000;
+  }, updateRate * 1000);
+}
 
 
-
+// update program
 function updateProgram() {
   var now = new Date();
+  if (debug) now = new Date(debugDate);
+  
   // var html = '<h1><i class="material-icons-outlined" style="font-size:40px;padding-right:8px;">event_note</i>Program:</h1>';
   var html = '';
   var count = 0;
+  
   for (var i = 0; i < program.length; i++) {
-
     var time = 'time';
     if (exists(program[i].delayed.from)) time = 'delayed';
 
-    var dateTime = new Date(year + '-' + program[i].date + 'T' + program[i][time].to + ':00+01:00');
-    // var dateTime = Date.parse(year + '-' + program[i].date + 'T' + program[i].time.to + ':00');
+    if (program[i].date == 'dato') program[i].date = dato;
+    var dateTime = new Date(program[i].date + 'T' + program[i][time].to + ':00' + tidssone);
 
-    if (dateTime > now && count < 5) {
+    if (dateTime > now && count <= programCount) {
       count++;
       var active = '';
-      if (new Date(year + '-' + program[i].date + 'T' + program[i][time].from + ':00+01:00') < now) active = 'active';
+      
+      if (new Date(program[i].date + 'T' + program[i][time].from + ':00' + tidssone) < now) active = 'active';
 
       var showTime = '>' + program[i][time].from;
       if (time == 'delayed') showTime = ' style="color:var(--delayed)"' + showTime;
@@ -123,7 +99,6 @@ function updateProgram() {
 
       var name = program[i].name;
       if (exists(program[i].icon)) name = '<i class="material-icons-outlined" style="padding-right:8px;">' + program[i].icon + '</i>' + name;
-
 
       html += '<div class="section ' + active + '">' +
         '<div class="time"' + showTime + '</div>' +
@@ -135,9 +110,9 @@ function updateProgram() {
       '</div>';
     }
   }
+  
   document.querySelector('.program').innerHTML = html;
 }
-
 
 function exists(object) {
   var notExisting = false;
@@ -146,17 +121,14 @@ function exists(object) {
 }
 
 
-
-
-
+// update digital clock
 function updateDigital() {
   var today = new Date();
-  var h = today.getHours();
-  var m = today.getMinutes();
-  m = ('0' + m).substr(-2); // checkTime
+  if (debug) today = new Date(debugDate);
+  var h = ('0' + today.getHours()).substr(-2);
+  var m = ('0' + today.getMinutes()).substr(-2);
   document.getElementById('digital').innerHTML = h + ":" + m;
 }
-
 
 
 ///////// CLOCK /////////
@@ -167,6 +139,7 @@ var mn = document.querySelector('#mn');
 // var ss = document.querySelector('#ss');
 function drawClock() {
   var day = new Date();
+  if (debug) day = new Date(debugDate);
   var hh = day.getHours() * 30;
   var mm = day.getMinutes() * deg;
   // hh = 8 * 30;
@@ -178,15 +151,14 @@ function drawClock() {
 }
 
 
-
-
-
-
 update();
-// setInterval(update, 100);
-setInterval(update, 500);
+setInterval(update, updateRate * 1000);
 function update() {
   drawClock();
   updateDigital();
   updateProgram();
 }
+
+
+
+}, initialWait * 1000); // wait 3 seconds
