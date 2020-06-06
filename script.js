@@ -1,4 +1,3 @@
-var initialWait = 3;
 var infoUpdateRate = 4;
 var dataUpdateRate = 5;
 var updateRate = 0.5; // analog clock, digital clock, program // debug: 0.05 // 0.5
@@ -8,6 +7,7 @@ var debug = false;
 
 var dato, program, info, tidssone;
 
+var firstUpdate = true;
 getData("data.json");
 function getData(request) {
   var oXHR = new XMLHttpRequest();
@@ -28,6 +28,7 @@ function getData(request) {
         tidssone = data.tidssone;
         program = data.program;
         info = data.info;
+        firstUpdate = false;
       }
     }
   }
@@ -36,9 +37,6 @@ function getData(request) {
 
 /////////////////////////////////////////
 /////////////////////////////////////////
-
-setTimeout(() => {
-
 
 
 // update data
@@ -53,10 +51,15 @@ var infoPos = 0;
 setInterval(infoUpdate, infoUpdateRate * 1000);
 infoUpdate();
 function infoUpdate() {
-  while (info[infoPos].slice(0, 3) == '---') infoPos++;
-  document.querySelector('.info').innerHTML = '<div>' + info[infoPos] + '</div>'; // <span class="material-icons-outlined">info</span>
-  infoPos++;
-  if (infoPos >= info.length) infoPos = 0;
+  if (!firstUpdate) {
+    while (info[infoPos].slice(0, 3) == '---') {
+      infoPos++;
+      if (infoPos >= info.length) infoPos = 0;
+    }
+    document.querySelector('.info').innerHTML = '<div>' + info[infoPos] + '</div>'; // <span class="material-icons-outlined">info</span>
+    infoPos++;
+    if (infoPos >= info.length) infoPos = 0;
+  }
 }
 
 
@@ -156,9 +159,5 @@ setInterval(update, updateRate * 1000);
 function update() {
   drawClock();
   updateDigital();
-  updateProgram();
+  if (!firstUpdate) updateProgram();
 }
-
-
-
-}, initialWait * 1000); // wait 3 seconds
