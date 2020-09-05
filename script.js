@@ -1,7 +1,7 @@
-var infoUpdateRate = 4;
-var dataUpdateRate = 5;
+var dataUpdateRate = 60; // data from GitHub
+var infoUpdateRate = 4; // info switch rate
 var updateRate = 0.5; // analog clock, digital clock, program // debug: 0.05 // 0.5
-var programCount = 4;
+var programCount = 5;
 
 var debug = false;
 
@@ -52,6 +52,7 @@ setInterval(infoUpdate, infoUpdateRate * 1000);
 infoUpdate();
 function infoUpdate() {
   if (!firstUpdate) {
+    if (info[infoPos] === undefined) infoPos = 0;
     while (info[infoPos].slice(0, 3) == '---') {
       infoPos++;
       if (infoPos >= info.length) infoPos = 0;
@@ -88,7 +89,7 @@ function updateProgram() {
     if (program[i].date == 'dato') program[i].date = dato;
     var dateTime = new Date(program[i].date + 'T' + program[i][time].to + ':00' + tidssone);
 
-    if (dateTime > now && count <= programCount) {
+    if (dateTime > now && count < programCount) {
       count++;
       var active = '';
       
@@ -154,10 +155,26 @@ function drawClock() {
 }
 
 
+// fade in & out logo
+var logo = 0;
+function logoFade() {
+  logo++;
+  if (logo > 600) { // every 10 min
+    let opacity = 0.3;
+    if (logo > 630) { // 20 sec fade in -> 10 sec on -> 20 sec fade out
+      opacity = 0;
+      logo = 0;
+    }
+    document.querySelector('.logo').style.filter = 'opacity(' + opacity + ')';
+  }
+}
+
+
 update();
 setInterval(update, updateRate * 1000);
 function update() {
   drawClock();
   updateDigital();
   if (!firstUpdate) updateProgram();
+  logoFade();
 }
