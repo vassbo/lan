@@ -99,7 +99,10 @@ function updateProgram() {
       if (time == 'delayed') showTime = ' style="color:var(--delayed)"' + showTime;
 
       var description = program[i].description;
-      if (exists(program[i].position)) description = '<span style="vertical-align:middle;">' + description + '</span><br><i class="material-icons-outlined" style="vertical-align:middle;padding-right:4px;">location_on</i>' + program[i].position;
+      if (exists(program[i].position)) {
+        if (exists(program[i].description)) description = '<span style="vertical-align:middle;">' + description + '</span><br>';
+        description += '<i class="material-icons-outlined" style="vertical-align:middle;padding-right:4px;">location_on</i>' + program[i].position;
+      }
 
       var name = program[i].name;
       if (exists(program[i].icon)) name = '<i class="material-icons-outlined" style="padding-right:8px;">' + program[i].icon + '</i>' + name;
@@ -156,14 +159,22 @@ function drawClock() {
 
 
 // fade in & out logo
-var logo = 0;
+var logo = 0, logoX = 0, logoArr = ['Varden Logo.png', 'ukuf.png', 'jarenkabelnett.png'];
 function logoFade() {
   logo++;
-  if (logo > 600) { // every 10 min
+  if (logo > 300) { // every 5 min
     let opacity = 0.3;
-    if (logo > 630) { // 20 sec fade in -> 10 sec on -> 20 sec fade out
+    if (logo > 330) { // 20 sec fade in -> 10 sec on -> 20 sec fade out
       opacity = 0;
+    }
+    if (logo > 350) {
       logo = 0;
+      // change logo src
+      logoX++;
+      if (logoX >= logoArr.length) logoX = 0;
+      setTimeout(() => {
+        document.querySelector('.logo').querySelector('img').src = 'logo/' + logoArr[logoX];
+      }, 100);
     }
     document.querySelector('.logo').style.filter = 'opacity(' + opacity + ')';
   }

@@ -90,6 +90,7 @@ body {
 } */
 .flexColumn {
   flex-direction: column;
+  align-self: center;
   /* padding: 0 10px; */
 }
 
@@ -99,6 +100,7 @@ body {
 .description {
   color: #cdcdcd;
   max-width: 400px;
+  /* margin-top: -4px; */
 }
 
 .color {
@@ -110,9 +112,9 @@ body {
 .color, .time {
   align-self: center;
 }
-.time {
-  /* padding: 0 16px; */
-}
+/* .time {
+  padding: 0 16px;
+} */
 
 
 /* clock */
@@ -222,7 +224,14 @@ body {
   padding: 9px 16px 12px 16px;
   border-radius: 2px;
   /* transition: all .2s; */
+  position: relative;
 }
 /* .info div:last-child {
   padding-bottom: 8px;
 } */
+.info .material-icons {
+  padding-right: 8px;
+  font-size: 1em;
+  position: absolute;
+  transform: translate(-100%, 25%);
+}

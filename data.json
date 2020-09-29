@@ -6,76 +6,112 @@
 
     "info": [
         "<b>Discord:</b> discord.gg/JRenH99",
+        "<span class='material-icons'>fastfood</span>Bli medlem i Varden for gratis mat: kr 50,-",
         "---<b>Trådløst WiFi:</b> passord (åpent?)",
         "---<b>Discord:</b> bit.ly/varden2",
         "<b>Minecraft Server:</b> <i>Kommer snart</i>",
         "---<b>Minecraft Server:</b> 192.168.19.178",
         "---<b>Film oppe:</b> Inside Out",
-        "Oppe er det film og avslapping",
-        "---Mistet ting er funnet! Snakk med Martin Berge",
-        "---Om noen har mistet en mobil snakk med Martin Berge",
-        "<b>Toaletter</b> i gangen og nede",
+        "---Oppe er det film og avslapping",
+        "<span class='material-icons'>bedtime</span>Mulighet for <b>soving</b> nede i gangen for gutter",
+        "<span class='material-icons'>bedtime</span>Mulighet for <b>soving</b> oppe på kontoret for jenter",
         "---<b>Infoskjerm</b>: laninfo.netlify.com",
-        "Mulighet for <b>soving</b> nede i sjokoladefabrikken"
+        "<span class='material-icons'>wc</span><b>Toaletter</b> for alle i gangen",
+        "<span class='material-icons'>wc</span><b>Toaletter</b> for gutter nede",
+        "<span class='material-icons'>coronavirus</span>Husk smittevernregler"
     ],
     "program": [
         {
-            "date": "dato",
+            "date": "2020-01-01",
             "time": {"from": "16:12", "to": "16:28"},
             "---comment-utsatt": "utsatt til / nytt klokkeslett",
             "delayed": {"from": "", "to": "16:14"},
 
             "---comment-ikoner": "fra https://material.io/resources/icons/ (outlined)",
             "icon": "",
+            "---icon-møte": "menu_book",
+            "---icon-mat": "fastfood",
+            "---icon-turnering": "emoji_events",
             "name": "Test",
             "description": "Vi skal spille super smash bros",
             "position": "Lillesalen",
             "color": "purple"
         },
         {
-            "---time": "{ \"from\": \"21:00\", \"to\": \"21:20\" },",
-            "time": {"from": "20:00", "to": "21:00"},
-            "delayed": {"from": "16:39", "to": "16:40"},
             "date": "dato",
-            "name": "Kveldsmøte",
+            "time": {"from": "19:00", "to": "19:50"},
+            "delayed": {"from": "", "to": ""},
             "---icon": "menu_book",
-            "description": "Andakt og lovsang",
-            "position": "Her / Hovedsalen",
+            "name": "Rigging",
+            "description": "",
+            "position": "",
             "color": "purple"
         },
         {
-            "time": {"from": "21:00", "to": "21:20"},
-            "---comment": "delayed: { \"from\": \"21:10\", \"to\": \"21:30\" },",
-            "delayed": {"from": "", "to": ""},
             "date": "dato",
-            "name": "Mat",
-            "icon": "fastfood",
-            "description": "Taco",
-            "position": "Nede i kjeller",
-            "color": "cyan"
+            "time": {"from": "20:00", "to": "20:01"},
+            "delayed": {"from": "", "to": ""},
+            "---icon": "menu_book",
+            "name": "LANET starter!",
+            "description": "",
+            "position": "",
+            "color": "purple"
         },
         {
-            "time": {"from": "23:30", "to": "23:59"},
-            "delayed": {"from": "", "to": ""},
             "date": "dato",
-            "name": "Super Smash Bros Turnering",
+            "time": {"from": "20:00", "to": "21:00"},
+            "delayed": {"from": "", "to": ""},
+            "icon": "movie",
+            "name": "Film",
+            "description": "Mamma Mia",
+            "position": "På loftet",
+            "color": "orange"
+        },
+        {
+            "date": "dato",
+            "time": {"from": "22:00", "to": "22:30"},
+            "delayed": {"from": "", "to": ""},
             "icon": "emoji_events",
-            "description": "Påmelding til Sondre H...",
-            "position": "Liten sal",
-            "color": "red"
+            "name": "Fortnite turnering",
+            "description": "Påmelding til Alfred Undheim",
+            "position": "",
+            "color": "green"
         },
         {
-            "time": {"from": "00:00", "to": "00:20"},
+            "date": "dato",
+            "time": {"from": "23:00", "to": "23:30"},
             "delayed": {"from": "", "to": ""},
-            "date": "2020-10-03",
-            "name": "Nattmat",
             "icon": "fastfood",
-            "description": "Boller og saft",
-            "position": "Nede i kjeller",
+            "name": "Mat",
+            "description": "Pizza",
+            "position": "I hovudsalen",
             "color": "cyan"
         },
         {
-            "time": { "from": "00:30", "to": "00:40" },
+            "date": "dato",
+            "time": {"from": "23:00", "to": "23:30"},
+            "delayed": {"from": "", "to": ""},
+            "icon": "fastfood",
+            "name": "Kiosk",
+            "description": "",
+            "position": "På loftet",
+            "color": "cyan"
+        },
+        {
+            "date": "dato",
+            "time": {"from": "23:00", "to": "23:30"},
+            "delayed": {"from": "", "to": ""},
+            "icon": "",
+            "name": "Just Dance",
+            "description": "",
+            "position": "På loftet",
+            "color": "orange"
+        },
+
+
+        
+        {
+            "time": { "from": "00:00", "to": "00:30" },
             "delayed": { "from": "", "to": "" },
             "date": "2020-10-03",
             "name": "MC Turnering",
@@ -83,6 +119,16 @@
             "description": "Bedwars og PvP",
             "position": "varden.mc.gg",
             "color": "green"
+        },
+        {
+            "time": {"from": "03:00", "to": "03:30"},
+            "delayed": {"from": "", "to": ""},
+            "date": "2020-10-03",
+            "name": "Nattmat",
+            "icon": "fastfood",
+            "description": "Boller og saft",
+            "position": "I hovedsalen",
+            "color": "cyan"
         }
     ]
 }
