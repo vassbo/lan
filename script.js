@@ -163,18 +163,18 @@ var logo = 0, logoX = 0, logoArr = ['Varden Logo.png', 'ukuf.png', 'jarenkabelne
 function logoFade() {
   logo++;
   if (logo > 300) { // every 5 min
-    let opacity = 0.3;
-    if (logo > 330) { // 20 sec fade in -> 10 sec on -> 20 sec fade out
+    let opacity = 0.5;
+    if (logo > 340) { // 20 sec fade in -> 20 sec on -> 20 sec fade out
       opacity = 0;
     }
-    if (logo > 350) {
+    if (logo > 360) {
       logo = 0;
       // change logo src
       logoX++;
       if (logoX >= logoArr.length) logoX = 0;
       setTimeout(() => {
         document.querySelector('.logo').querySelector('img').src = 'logo/' + logoArr[logoX];
-      }, 100);
+      }, 500);
     }
     document.querySelector('.logo').style.filter = 'opacity(' + opacity + ')';
   }

@@ -233,5 +233,6 @@ body {
   padding-right: 8px;
   font-size: 1em;
   position: absolute;
-  transform: translate(-100%, 25%);
+  /* transform: translate(-100%, 25%); */
+  transform: translateX(-100%);
 }
