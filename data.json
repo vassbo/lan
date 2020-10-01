@@ -7,10 +7,9 @@
     "info": [
         "<b>Discord:</b> discord.gg/JRenH99",
         "---<b>Discord:</b> bit.ly/varden2",
-        "<span class='material-icons'>fastfood</span>Bli medlem i Varden for gratis mat: <u>kr 50,-</u>",
         "<span class='material-icons'>wifi</span><b>Trådløst WiFi:</b> 12345678",
         "<b>Minecraft Server:</b> <i>Kommer snart</i>",
-        "---<b>Minecraft Server:</b> 192.168.19.178",
+        "---<b>Minecraft Server:</b> 192.168.123.10",
         "<span class='material-icons'>bedtime</span>Mulighet for <b>soving</b> nede i gangen for gutter",
         "<span class='material-icons'>bedtime</span>Mulighet for <b>soving</b> oppe på kontoret for jenter",
         "---<b>Infoskjerm</b>: laninfo.netlify.com",
@@ -120,24 +119,44 @@
 
         
         {
+            "date": "2020-10-03",
             "time": { "from": "00:00", "to": "00:30" },
             "delayed": { "from": "", "to": "" },
-            "date": "2020-10-03",
-            "name": "MC Turnering",
             "icon": "emoji_events",
+            "name": "MC Turnering",
             "description": "Bedwars og PvP",
             "position": "varden.mc.gg",
             "color": "green"
         },
         {
+            "date": "2020-10-03",
             "time": {"from": "03:00", "to": "03:30"},
             "delayed": {"from": "", "to": ""},
-            "date": "2020-10-03",
-            "name": "Nattmat",
             "icon": "fastfood",
+            "name": "Nattmat",
             "description": "Påsmurte frokostbrød med ost og skinke",
             "position": "I hovedsalen",
             "color": "cyan"
+        },
+        {
+            "date": "2020-10-03",
+            "time": {"from": "08:00", "to": "08:59"},
+            "delayed": {"from": "", "to": ""},
+            "---icon": "",
+            "name": "Nedrigg",
+            "description": "",
+            "position": "",
+            "color": "purple"
+        },
+        {
+            "date": "2020-10-03",
+            "time": {"from": "09:00", "to": "09:05"},
+            "delayed": {"from": "", "to": ""},
+            "---icon": "",
+            "name": "LAN ferdig!",
+            "description": "Neste Varden: 16/10",
+            "position": "",
+            "color": "purple"
         }
     ]
 }
