@@ -8,7 +8,7 @@
         "<b>Discord:</b> discord.gg/JRenH99",
         "---<b>Discord:</b> bit.ly/varden2",
         "<span class='material-icons'>fastfood</span>Bli medlem i Varden for gratis mat: <u>kr 50,-</u>",
-        "---<b>Trådløst WiFi:</b> passord (åpent?)",
+        "<span class='material-icons'>wifi</span><b>Trådløst WiFi:</b> 12345678",
         "<b>Minecraft Server:</b> <i>Kommer snart</i>",
         "---<b>Minecraft Server:</b> 192.168.19.178",
         "<span class='material-icons'>bedtime</span>Mulighet for <b>soving</b> nede i gangen for gutter",
@@ -82,7 +82,7 @@
             "delayed": {"from": "", "to": ""},
             "icon": "emoji_events",
             "name": "Fortnite turnering",
-            "description": "Påmelding til Alfred Undheim",
+            "description": "Påmelding på Discord",
             "position": "",
             "color": "green"
         },
