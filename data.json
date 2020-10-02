@@ -51,18 +51,28 @@
             "delayed": {"from": "", "to": ""},
             "---icon": "menu_book",
             "name": "LANET starter!",
-            "description": "",
+            "description": "Spilling og film oppe",
             "position": "",
             "color": "purple"
         },
         {
             "date": "dato",
-            "time": {"from": "20:30", "to": "20:45"},
+            "time": {"from": "20:30", "to": "20:40"},
             "delayed": {"from": "", "to": ""},
             "---icon": "menu_book",
-            "name": "Felles informasjon",
+            "name": "Felles informasjon ved scenen",
             "description": "",
             "position": "I hovedsalen",
+            "color": "purple"
+        },
+        {
+            "date": "dato",
+            "time": {"from": "20:40", "to": "20:50"},
+            "delayed": {"from": "", "to": ""},
+            "---icon": "menu_book",
+            "name": "Felles informasjon ved kino",
+            "description": "",
+            "position": "På loftet",
             "color": "purple"
         },
         {
@@ -70,8 +80,8 @@
             "time": {"from": "21:00", "to": "21:30"},
             "delayed": {"from": "", "to": ""},
             "icon": "fastfood",
-            "name": "Mat",
-            "description": "Taco",
+            "name": "Middag",
+            "description": "Taco. Husk masse sprit! Kiosken er åpen!",
             "position": "I hovedsalen",
             "color": "cyan"
         },
@@ -84,26 +94,6 @@
             "description": "Påmelding på Discord",
             "position": "",
             "color": "green"
-        },
-        {
-            "date": "dato",
-            "time": {"from": "21:00", "to": "22:00"},
-            "delayed": {"from": "", "to": ""},
-            "icon": "movie",
-            "name": "Film",
-            "description": "Tittel",
-            "position": "På loftet",
-            "color": "orange"
-        },
-        {
-            "date": "dato",
-            "time": {"from": "23:00", "to": "23:30"},
-            "delayed": {"from": "", "to": ""},
-            "icon": "fastfood",
-            "name": "Kiosk",
-            "description": "",
-            "position": "På loftet",
-            "color": "cyan"
         },
         {
             "date": "dato",
@@ -123,20 +113,50 @@
             "time": { "from": "00:00", "to": "00:30" },
             "delayed": { "from": "", "to": "" },
             "icon": "emoji_events",
-            "name": "MC Turnering",
-            "description": "Bedwars og PvP",
-            "position": "varden.mc.gg",
+            "name": "Minecraft Turnering",
+            "description": "Påmelding på Discord (Bedwars og/eller PvP)",
+            "position": "192.168.123.10",
+            "color": "green"
+        },
+        {
+            "date": "2020-10-03",
+            "time": {"from": "00:00", "to": "00:30"},
+            "delayed": {"from": "", "to": ""},
+            "icon": "",
+            "name": "Film",
+            "description": "",
+            "position": "På loftet",
+            "color": "orange"
+        },
+        {
+            "date": "2020-10-03",
+            "time": {"from": "00:00", "to": "08:00"},
+            "delayed": {"from": "", "to": ""},
+            "icon": "fastfood",
+            "name": "Nattmat",
+            "description": "(00:00-08:00) Mulighet for nattmat dersom noen ønsker. Ta kontakt med Martin Berge eller Eline Fosse.",
+            "position": "I hovedsalen",
+            "color": "cyan"
+        },
+        {
+            "date": "2020-10-03",
+            "time": { "from": "02:00", "to": "02:30" },
+            "delayed": { "from": "", "to": "" },
+            "icon": "emoji_events",
+            "name": "Rocket League Turnering",
+            "description": "Påmelding på Discord",
+            "position": "",
             "color": "green"
         },
         {
             "date": "2020-10-03",
             "time": {"from": "03:00", "to": "03:30"},
             "delayed": {"from": "", "to": ""},
-            "icon": "fastfood",
-            "name": "Nattmat",
-            "description": "Påsmurte frokostbrød med ost og skinke",
-            "position": "I hovedsalen",
-            "color": "cyan"
+            "icon": "",
+            "name": "Antageligvis Film",
+            "description": "",
+            "position": "På loftet",
+            "color": "orange"
         },
         {
             "date": "2020-10-03",
@@ -144,7 +164,7 @@
             "delayed": {"from": "", "to": ""},
             "---icon": "",
             "name": "Nedrigg",
-            "description": "",
+            "description": "Alle tar sine egne bord og rydder rundt plassen sin. Henvend dere til Martin Berge for godkjenning.",
             "position": "",
             "color": "purple"
         },
