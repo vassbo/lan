@@ -152,8 +152,8 @@
             "time": {"from": "03:00", "to": "03:30"},
             "delayed": {"from": "", "to": ""},
             "icon": "",
-            "name": "Antageligvis Film",
-            "description": "",
+            "name": "Film",
+            "description": "Fast & Furious 5",
             "position": "På loftet",
             "color": "orange"
         },
