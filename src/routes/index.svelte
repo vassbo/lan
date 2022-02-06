@@ -75,7 +75,7 @@
   }
   .grid :global(main) {
     width: 50%;
-    padding: 20px;
+    padding: 50px;
     display: flex;
     justify-content: center;
     align-items: center;

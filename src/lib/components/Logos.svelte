@@ -29,7 +29,7 @@
 
 <div class="logo">
   {#if active}
-    <img transition:fade={{ duration: fadein }} src="/src/lib/logos/{logos[current]}.png" alt="" />
+    <img transition:fade={{ duration: fadein }} src="./src/lib/logos/{logos[current]}.png" alt="" />
   {/if}
 </div>
 

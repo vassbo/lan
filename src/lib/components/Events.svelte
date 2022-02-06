@@ -16,6 +16,8 @@
 
   export let time: Date
   export let data: any
+  export let max: number = 6
+
   let events: Event[] = []
   $: events = data.events
     .filter((a: any) => new Date(new Date(a.to).getTime() + (a.delayed || 0) * 60000).getTime() - time.getTime() > 0)
@@ -24,7 +26,7 @@
 
 <main>
   {#each events as event, i}
-    {#if i < 6}
+    {#if i < max || max < 0}
       <div class="event" class:active={new Date(new Date(event.from).getTime() + (event.delayed || 0) * 60000).getTime() - time.getTime() <= 0}>
         <div style="display: flex;gap: 20px;overflow: hidden;">
           {#if event.icon}
@@ -99,7 +101,7 @@
     overflow: hidden;
     padding: 10px 20px;
     border-radius: 8px;
-    background-color: rgb(255 255 255 / 0.2);
+    border: 3px solid rgb(255 255 255 / 0.2);
     transition: background-color 1s;
   }
 
