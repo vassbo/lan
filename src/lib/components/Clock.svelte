@@ -97,7 +97,7 @@
     flex: 0;
     text-align: center;
     font-size: 2em;
-    text-shadow: var(--glow);
+    /* text-shadow: var(--glow); */
   }
 
   svg {
