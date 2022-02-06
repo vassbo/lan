@@ -45,7 +45,7 @@
               {/if}
             </span>
             {#if event.description}
-              <p style="padding-right: 10px;">{event.description}</p>
+              <p style="padding-right: 10px;">{@html event.description}</p>
             {/if}
           </div>
         </div>
