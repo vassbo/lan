@@ -2,11 +2,11 @@
   import { onMount } from "svelte"
   import { fade } from "svelte/transition"
 
-  let logos = ["jærlan", "varden", "uf", "ukuf", "jærenkabelnett"]
+  let logos = ["jærlan", "varden", "uf", "ukuf", "grensesnitt", "pap", "jærenkabelnett"]
 
-  let duration: number = 15 * 1000
+  let duration: number = 30 * 1000
   let fadein: number = 5 * 1000
-  let between: number = 60 * 1000
+  let between: number = 30 * 1000
 
   let current: number = 0
   let active: boolean = false
@@ -46,7 +46,7 @@
   }
 
   img {
-    width: 60%;
+    width: 50%;
     height: 100%;
     object-fit: contain;
   }

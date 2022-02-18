@@ -11,14 +11,15 @@
 
   onMount(() => {
     async function fetchData() {
-      fetch("https://json.extendsclass.com/bin/c1f9f4b148a4")
+      // setting to no-store to prevent chrome only getting cashed version
+      fetch("https://json.extendsclass.com/bin/c1f9f4b148a4", { cache: "no-store" })
         .then((response) => response.json())
         .then((d) => (data = d))
-        .catch((error) => console.log(error))
+        .catch((error) => console.warn(error))
     }
 
-    // update every 2 minutes
-    const interval = setInterval(fetchData, 2 * 60 * 1000)
+    // update every 3 minutes
+    const interval = setInterval(fetchData, 3 * 60000)
     fetchData()
 
     return () => clearInterval(interval)
@@ -29,8 +30,8 @@
   <Time let:time>
     {#if Object.keys(data).length}
       <Info {data} />
-      <!-- if less than 30 minutes to start -->
-      {#if new Date(data.start).getTime() - time.getTime() < 30 * 60000 && new Date(data.start).getTime() - time.getTime() > 0}
+      <!-- if less than 60 minutes to start -->
+      {#if new Date(data.start).getTime() - time.getTime() < 60 * 60000 && new Date(data.start).getTime() - time.getTime() > 0}
         <div class="countdown" transition:fade>
           <Countdown {time} end={new Date(data.start)} transition />
         </div>
