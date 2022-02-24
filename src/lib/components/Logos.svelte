@@ -2,13 +2,13 @@
   import { onMount } from "svelte"
   import { fade } from "svelte/transition"
 
-  let logos = ["jærlan", "varden", "uf", "ukuf", "grensesnitt", "pap", "jærenkabelnett"]
+  let logos = ["jærlan", "varden", "uf", "ukuf", "grensesnitt", "jærenkabelnett", "pap", "pizzabakeren"]
 
   let duration: number = 30 * 1000
   let fadein: number = 5 * 1000
   let between: number = 30 * 1000
 
-  let current: number = 0
+  let current: number = -1
   let active: boolean = false
 
   onMount(() => {
