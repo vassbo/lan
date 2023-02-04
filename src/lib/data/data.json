@@ -1,128 +1,189 @@
 {
-  "start": "2022-02-25 20:00",
-  "info": [
-    { "name": "Discord", "description": "discord.gg/JRenH99", "icon": "tag" },
-    { "name": "WiFi passord", "description": "12345678", "icon": "wifi" },
-    { "name": "Lokal Minecraft Server", "description": "192.168.123.149", "icon": "game" },
-    { "disabled": true, "name": "Infoskjerm", "description": "laninfo.netlify.com", "icon": "info" },
-    { "name": "Soving gutter", "description": "Nede i gangen", "icon": "bed" },
-    { "name": "Soving jenter", "description": "Oppe på kontoret", "icon": "bed" },
-    { "name": "Toalett", "description": "I gangen i midten for alle", "icon": "wc" },
-    { "name": "Toalett", "description": "Nede for gutter", "icon": "wc" },
-    { "name": "Vis hensyn til andres utstyr", "icon": "thumb" },
-    { "name": "Søppel skal ikke på gulvet", "icon": "trash" },
-    { "disabled": true, "name": "Husk smittevernregler", "icon": "virus" }
-  ],
-  "events": [
-    {
-      "name": "Opprigg",
-      "icon": "game",
-      "from": "2022-02-25 19:00",
-      "to": "2022-02-25 20:00"
-    },
-    {
-      "name": "JærLANet starter!",
-      "icon": "star",
-      "from": "2022-02-25 20:00",
-      "to": "2022-02-25 20:00"
-    },
-    {
-      "name": "Info",
-      "description": "Felles informasjon",
-      "color": "orange",
-      "icon": "info",
-      "from": "2022-02-25 20:30",
-      "to": "2022-02-25 20:35",
-      "location": "Scenen"
-    },
-    {
-      "name": "Info",
-      "description": "Felles informasjon",
-      "color": "orange",
-      "icon": "info",
-      "from": "2022-02-25 20:40",
-      "to": "2022-02-25 20:45",
-      "location": "Loftet"
-    },
-    {
-      "name": "Middag",
-      "description": "Taco. Husk masse sprit! Kiosken er åpen!",
-      "color": "cyan",
-      "icon": "food",
-      "from": "2022-02-25 21:00",
-      "to": "2022-02-25 21:30",
-      "location": "Hovedsalen"
-    },
-    {
-      "name": "Fortnite-turnering",
-      "description": "Påmelding på discord",
-      "color": "red",
-      "icon": "trophy",
-      "from": "2022-02-25 22:00",
-      "to": "2022-02-25 22:30"
-    },
-    {
-      "name": "Just dance",
-      "color": "pink",
-      "icon": "star",
-      "location": "Loftet",
-      "from": "2022-02-25 23:00",
-      "to": "2022-02-25 23:30"
-    },
-    {
-      "name": "Minecraft-turnering",
-      "description": "Påmelding på Discord (Bedwars og/eller PvP)",
-      "color": "red",
-      "icon": "trophy",
-      "from": "2022-02-26 00:00",
-      "to": "2022-02-26 00:30"
-    },
-    {
-      "name": "Film",
-      "location": "Loftet",
-      "color": "lightblue",
-      "icon": "movie",
-      "from": "2022-02-26 00:00",
-      "to": "2022-02-26 00:30"
-    },
-    {
-      "name": "Nattmat",
-      "description": "Mulighet for nattmat dersom noen ønsker. Ta kontakt med Martin Berge eller Eline Fosse.",
-      "color": "cyan",
-      "icon": "food",
-      "from": "2022-02-26 00:00",
-      "to": "2022-02-26 08:00"
-    },
-    {
-      "name": "Rocket League-turnering",
-      "description": "Påmelding på Discord",
-      "color": "red",
-      "icon": "trophy",
-      "from": "2022-02-26 02:00",
-      "to": "2022-02-26 02:30"
-    },
-    {
-      "name": "Film",
-      "description": "Fast & Furious 5",
-      "location": "Loftet",
-      "color": "blue",
-      "icon": "movie",
-      "from": "2022-02-26 03:00",
-      "to": "2022-02-26 03:30"
-    },
-    {
-      "name": "Nedrigg",
-      "description": "Alle tar sine egne bord og rydder rundt plassen sin. Søppel skal i dunkene! Henvend dere til Martin Berge for godkjenning.",
-      "icon": "game",
-      "from": "2022-02-26 08:00",
-      "to": "2022-02-26 09:00"
-    },
-    {
-      "name": "JærLANet ferdig!",
-      "description": "Neste Varden: 11.03\nNeste UF: 26.02\nNeste UKUF: 05.03",
-      "icon": "star",
-      "from": "2022-02-26 09:00",
-      "to": "2022-02-26 09:30"
-    }
-  ]
+    "start": "2023-02-24 19:00",
+    "info": [
+        {
+            "name": "Discord",
+            "description": "discord.gg/JRenH99",
+            "icon": "tag"
+        },
+        {
+            "name": "WiFi passord",
+            "description": "123456789",
+            "icon": "wifi"
+        },
+        {
+            "name": "Minecraft Server (Java og Bedrock)",
+            "description": "Kommer",
+            "icon": "game"
+        },
+        {
+            "name": "Toalett",
+            "description": "test",
+            "icon": "wc"
+        },
+        {
+            "name": "Vis hensyn til andres utstyr",
+            "icon": "thumb"
+        },
+        {
+            "name": "Søppel skal ikke på gulvet",
+            "icon": "trash"
+        }
+    ],
+    "events": [
+        {
+            "name": "Informasjon",
+            "location": "Scenen",
+            "color": "#edc855",
+            "icon": "info",
+            "from": "2023-02-24 18:50",
+            "to": "2023-02-24 19:00"
+        },
+        {
+            "name": "JærLANet starter",
+            "color": "#75a158",
+            "icon": "game",
+            "from": "2023-02-24 19:00",
+            "to": "2023-02-24 19:00"
+        },
+        {
+            "name": "Pizzabakeren",
+            "color": "#8ABFF5",
+            "icon": "food",
+            "from": "2023-02-24 20:00",
+            "to": "2023-02-24 20:30"
+        },
+        {
+            "name": "Istime",
+            "color": "#8ABFF5",
+            "icon": "ice",
+            "from": "2023-02-24 21:00",
+            "to": "2023-02-24 22:00"
+        },
+        {
+            "name": "Bingo",
+            "color": "#75a158",
+            "icon": "trophy",
+            "from": "2023-02-24 21:00",
+            "to": "2023-02-24 21:30"
+        },
+        {
+            "name": "Mariokart-turnering",
+            "description": "Påmelding til Martin",
+            "color": "#75a158",
+            "icon": "trophy",
+            "from": "2023-02-24 21:00",
+            "to": "2023-02-24 21:30"
+        },
+        {
+            "name": "Premieutdeling",
+            "description": "",
+            "color": "#edc855",
+            "icon": "star",
+            "from": "2023-02-24 22:55",
+            "to": "2023-02-24 23:00",
+            "location": ""
+        },
+        {
+            "name": "Gladiatorturnering i Minecraft",
+            "description": "3 mot 3. Påmelding til Martin",
+            "location": "Minecraft IP: 192.168.119.149",
+            "color": "#75a158",
+            "icon": "trophy",
+            "from": "2023-02-24 23:00",
+            "to": "2023-02-24 23:30"
+        },
+        {
+            "name": "Film",
+            "location": "Loftet",
+            "color": "#8ABFF5",
+            "icon": "movie",
+            "from": "2023-02-25 00:00",
+            "to": "2023-02-25 01:00"
+        },
+        {
+            "name": "Parkour",
+            "location": "192.168.119.149",
+            "color": "#75a158",
+            "icon": "trophy",
+            "from": "2023-02-25 01:00",
+            "to": "2023-02-25 01:20"
+        },
+        {
+            "name": "Istime",
+            "color": "#8ABFF5",
+            "icon": "ice",
+            "from": "2023-02-25 02:00",
+            "to": "2023-02-25 03:00"
+        },
+        {
+            "name": "Rocket League-turnering",
+            "description": "Påmelding til Martin",
+            "color": "#75a158",
+            "icon": "trophy",
+            "from": "2023-02-25 02:00",
+            "to": "2023-02-25 02:30"
+        },
+        {
+            "name": "Dancing Queen",
+            "description": "Just Dance",
+            "location": "Loftet",
+            "color": "#edc855",
+            "icon": "star",
+            "from": "2023-02-25 02:30",
+            "to": "2023-02-25 03:00"
+        },
+        {
+            "name": "Gul bolle show",
+            "description": "Guuuuuuuuuuuuuuuuuuuuul bolle show",
+            "color": "#edc855",
+            "icon": "trophy",
+            "from": "2023-02-25 03:00",
+            "to": "2023-02-25 03:30"
+        },
+        {
+            "name": "Istime",
+            "color": "#8ABFF5",
+            "icon": "ice",
+            "from": "2023-02-25 05:00",
+            "to": "2023-02-25 06:00"
+        },
+        {
+            "name": "Lynsjakk",
+            "description": "For treige hoder",
+            "location": "Loftet",
+            "color": "#75a158",
+            "icon": "trophy",
+            "from": "2023-02-25 05:00",
+            "to": "2023-02-25 05:30"
+        },
+        {
+            "name": "Morgentrim med Martin",
+            "color": "#edc855",
+            "icon": "star",
+            "from": "2023-02-25 06:30",
+            "to": "2023-02-25 06:40"
+        },
+        {
+            "name": "Nedrigg ferdig",
+            "description": "Alle rigger ned og kaster søppel skal i dunkene. Plassen din må godkjennes av leder før du kan gå.",
+            "icon": "game",
+            "from": "2023-02-25 09:00",
+            "to": "2023-02-25 09:30"
+        },
+        {
+            "name": "JærLANet ferdig",
+            "description": "Neste UKUF: 05.03<br>Neste Varden: 11.03<br>Neste UF: 12.03",
+            "color": "#edc855",
+            "icon": "star",
+            "from": "2023-02-25 09:00",
+            "to": "2023-02-25 12:00"
+        },
+        {
+            "name": "Dørene åpner",
+            "icon": "star",
+            "from": "2023-02-24 18:00",
+            "to": "2023-02-24 18:30"
+        }
+    ]
 }
