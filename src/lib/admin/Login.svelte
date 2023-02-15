@@ -11,7 +11,7 @@
     }
 
     // DEBUG
-    loggedin = true
+    // loggedin = true
 </script>
 
 <div class="center">
